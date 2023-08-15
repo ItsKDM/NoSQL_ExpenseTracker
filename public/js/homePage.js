@@ -87,7 +87,7 @@ async function getAllExpenses() {
     );
     console.log(res.data);
     res.data.expenses.forEach((expenses) => {
-      const id = expenses.id;
+      const id = expenses._id;
       const date = expenses.date;
       const categoryValue = expenses.category;
       const descriptionValue = expenses.description;
@@ -170,7 +170,7 @@ async function paginationBtn(e) {
     table.innerHTML = "";
 
     res.data.expenses.forEach((expenses) => {
-      const id = expenses.id;
+      const id = expenses._id;
       const date = expenses.date;
       const categoryValue = expenses.category;
       const descriptionValue = expenses.description;
